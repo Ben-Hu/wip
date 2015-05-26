@@ -363,7 +363,7 @@ body {
 }
 
 .gen-container {
-    /* debuf */ 
+    /* debug */
     border: 1px #0000;
     background: 0;
     opacity: 0.5;
