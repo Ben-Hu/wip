@@ -20,6 +20,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 p {
+    font-family: Monserrat, "Helvetica Neueu", Helvetica,Arial,sans-serif;
     margin: 0 0 25px;
     font-size: 18px;
     line-height: 1.5;
@@ -34,7 +35,7 @@ p {
 }
 
 a {
-    color: #42dca3;
+    color: #fff;
     -webkit-transition: all .2s ease-in-out;
     -moz-transition: all .2s ease-in-out;
     transition: all .2s ease-in-out;
@@ -135,7 +136,7 @@ a:hover, a:focus {
     padding: 100px 0;
     text-align: center;
     color: #fff;
-    background: url(../assets/intro-bg.jpg) no-repeat bottom center scroll;
+    background: url(../assets/introbw.jpg) no-repeat bottom center scroll;
     background-color: #000;
     -webkit-background-size: cover;
     -moz-background-size: cover;
@@ -253,6 +254,7 @@ a:hover, a:focus {
     width: 100%;
     padding: 50px 0;
     color: #fff;
+    /* background: url(../assets/downloads-bg.jpg) no-repeat center center scroll; */   
     background: url(../assets/downloads-bg.jpg) no-repeat center center scroll;
     background-color: #000;
     -webkit-background-size: cover;
@@ -289,14 +291,14 @@ a:hover, a:focus {
     font-weight: 400;
     -webkit-transition: all .3s ease-in-out;
     -moz-transition: all .3s ease-in-out;
-    transition: all .3s ease-in-out;
+    transition: all .3s ease-in-out;ss
 }
 
 .btn-default {
     /* border: 1px solid #42dca3;*/
     /* color: #42dca3; */
-    border: 2px solid color: #fff;
-    color: #fff;
+    border: 3px solid #fff;
+    color: #fff; 
     background-color: transparent;
 }
 
