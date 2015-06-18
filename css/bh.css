@@ -17,6 +17,9 @@ h1, h2, h3, h4, h5, h6 {
     font-family: Montserrat,"Helvetica Neue",Helvetica,Arial,sans-serif;
     font-weight: 700;
     letter-spacing: 1px;
+    color: #fff;
+    /* text-shadow: -0.8px 0 #aaa, 0 0.8px #aaa, 0.8px 0 #aaa, 0 -0.8px #aaa; */
+    /* text-shadow: -2px 0 #000, 0 3px #000, 3px 0 #000, 0 -3px #000; */
 }
 
 p {
@@ -43,7 +46,9 @@ a {
 
 a:hover, a:focus {
     text-decoration: none;
-    color: #1d9b6c;
+    /* color: #1d9b6c; */
+    /* color: #0af */
+    color: #666
 }
 
 .light {
@@ -136,7 +141,16 @@ a:hover, a:focus {
     padding: 100px 0;
     text-align: center;
     color: #fff;
-    background: url(../assets/introbw.jpg) no-repeat bottom center scroll;
+    background: 
+        linear-gradient(
+            rgba(000, 0, 0, 0.5), 
+            rgba(00, 0, 0, 0.5)
+        ),
+        url(../assets/introbw.jpg) 
+        no-repeat
+        bottom
+        center
+        scroll;
     background-color: #000;
     -webkit-background-size: cover;
     -moz-background-size: cover;
@@ -248,14 +262,15 @@ a:hover, a:focus {
 
 .content-section {
     padding-top: 100px;
+    line-height: 1.9em;
+    margin-bottom: 1em
 }
 
-.download-section {
+.projects-section {
     width: 100%;
-    padding: 50px 0;
+    padding: 1.5em 0
     color: #fff;
     /* background: url(../assets/downloads-bg.jpg) no-repeat center center scroll; */   
-    background: url(../assets/downloads-bg.jpg) no-repeat center center scroll;
     background-color: #000;
     -webkit-background-size: cover;
     -moz-background-size: cover;
@@ -304,7 +319,7 @@ a:hover, a:focus {
 
 .btn-default:hover,
 .btn-default:focus {
-    border: 1px solid #ffff;
+    border: 3px solid #000;
     outline: 0;
     color: #000;
     background-color: #ffff;
@@ -378,3 +393,60 @@ body {
     -webkit-transform: translate(50%,50%);
     transform: translate(50%,50%);
 }
+
+.portfolio-item {
+    margin-bottom: 25px;
+}
+
+.portfolio-item:hover {
+    opacity: 1
+}
+.portfolio-item:hover span {
+    bottom: 3px
+}
+
+.portfolio-item span {
+    background: rgba(0, 0, 0, 0.6);
+    bottom: -4.5em;
+    color: #fff;
+    font-size: 0.85em;
+    left: 0;
+    padding: 10px 0;
+    position: absolute;
+    -webkit-transition: all .15s ease-in;
+    transition: all .15s ease-in;
+    width: 100%
+}
+
+/* portfolio image fade-out container */
+.pitem-container {
+    position: relative;
+}
+
+.pitem-container .pitem-text {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: none;
+    color: #FFF;
+}
+.pitem-container:hover .pitem-text {
+    display: block;
+    background: rgba(0, 0, 0, .6);
+}
+
+
+.pitem-text h3 {
+    margin-top: 65%
+}
+
+.pitem-text p {
+    margin-top: -15%
+}
+
+.intro-more {
+    position: relative
+    margin-top: -15%
+}   
