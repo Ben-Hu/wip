@@ -11,10 +11,11 @@ body {
     background-color: #000;
 }
 
-h1, h2, h3, h4, h5, h6 {
+h1, h2, h3 {
     margin: 0 0 35px;
-    text-transform: uppercase;
-    font-family: Montserrat,"Helvetica Neue",Helvetica,Arial,sans-serif;
+    text-transform: capitalize;
+    /* font-family: Abel; */
+    font-family: Montserrat,"Helvetica Neue",Helvetica,Arial,sans-serif;    
     font-weight: 700;
     letter-spacing: 1px;
     color: #fff;
@@ -48,7 +49,7 @@ a:hover, a:focus {
     text-decoration: none;
     /* color: #1d9b6c; */
     /* color: #0af */
-    color: #666
+    color: #666;
 }
 
 .light {
@@ -58,7 +59,7 @@ a:hover, a:focus {
 .navbar-custom {
     margin-bottom: 0;
     border-bottom: 1px solid rgba(255,255,255,.3);
-    text-transform: uppercase;
+    text-transform: capitalize;
     font-family: Montserrat,"Helvetica Neue",Helvetica,Arial,sans-serif;
     background-color: #000;
 }
@@ -109,7 +110,8 @@ a:hover, a:focus {
 }
 
 .navbar-custom .nav li.active a {
-    background-color: rgba(255,255,255,.3);
+    background-color: rgba(255,255,255,0.0);
+    border-bottom: 1px solid rgba(255, 255, 255, .8);
 }
 
 .navbar-custom .nav li.active a:hover {
@@ -129,8 +131,8 @@ a:hover, a:focus {
 
     .navbar-custom.top-nav-collapse {
         padding: 0;
-        border-bottom: 1px solid rgba(255,255,255,.3);
-        background: #000;
+        border-bottom: 1px solid rgba(0, 0, 0, .8);
+        background: rgba(0, 0, 0, .5);
     }
 }
 
@@ -143,14 +145,14 @@ a:hover, a:focus {
     color: #fff;
     background: 
         linear-gradient(
-            rgba(000, 0, 0, 0.5), 
-            rgba(00, 0, 0, 0.5)
+            rgba(0, 0, 0, 0.65), 
+            rgba(0, 0, 0, 0.65)
         ),
         url(../assets/introbw.jpg) 
         no-repeat
         bottom
         center
-        scroll;
+        fixed;
     background-color: #000;
     -webkit-background-size: cover;
     -moz-background-size: cover;
@@ -259,23 +261,73 @@ a:hover, a:focus {
         transform: scale(1);
     }
 }
-
-.content-section {
+.about-background {
+    width: 100%;
     padding-top: 100px;
     line-height: 1.9em;
-    margin-bottom: 1em
-}
-
-.projects-section {
-    width: 100%;
-    padding: 1.5em 0
-    color: #fff;
-    /* background: url(../assets/downloads-bg.jpg) no-repeat center center scroll; */   
+    margin-bottom: 1em;
     background-color: #000;
     -webkit-background-size: cover;
     -moz-background-size: cover;
     background-size: cover;
     -o-background-size: cover;
+    background: 
+        linear-gradient(
+            rgba(50, 50, 50, 0.1), 
+            rgba(50, 50, 50, 0.1)
+        ),
+        no-repeat
+        bottom
+        center
+        scroll;
+}
+
+.about-section {
+    width: 70%;
+    padding-top: 100px;
+    line-height: 1.9em;
+    margin-bottom: 1em;
+    /*
+    background: 
+        linear-gradient(
+            rgba(100, 100, 100, 0.1), 
+            rgba(100, 100, 100, 0.1)
+        ),
+        url(../assets/projectsbw.jpg)
+        no-repeat
+        bottom
+        center
+        scroll;
+    */
+}
+
+.projects-section {
+    display: table;
+    text-align: center;
+    width: 100%;
+    padding: 100px 0
+    color: #fff;
+    background-color: #000;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    background-size: cover;
+    -o-background-size: cover;
+    /*
+    background: 
+        linear-gradient(
+            rgba(50, 50, 50, 0.1), 
+            rgba(50, 50, 50, 0.1)
+        ),
+        url(../assets/introbw2.jpg)
+        no-repeat
+        bottom
+        center
+        scroll;
+    background: -webkit-linear-gradient(#000, #000, #001); 
+    background: -o-linear-gradient(#000, #000, #001); 
+    background: -moz-linear-gradient(#000, #000, #001);  
+    background: linear-gradient(#000, #000, #001); 
+    */
 }
 
 #map {
@@ -285,12 +337,18 @@ a:hover, a:focus {
 }
 
 @media(min-width:767px) {
-    .content-section {
-        padding-top: 250px;
+    .intro-section {
+        padding-bottom: -250px;
+    }
+    .about-section {
+        padding-top: 100px;
+        padding-bottom: 160px;
     }
 
-    .download-section {
-        padding: 100px 0;
+    .projects-section {
+        /* padding: 100px 0; */
+        padding-bottom : 200px;
+        padding-top: 200px;
     }
 
     #map {
@@ -301,7 +359,7 @@ a:hover, a:focus {
 
 .btn {
     border-radius: 0;
-    text-transform: uppercase;
+    text-transform: capitalize;
     font-family: Montserrat,"Helvetica Neue",Helvetica,Arial,sans-serif;
     font-weight: 400;
     -webkit-transition: all .3s ease-in-out;
@@ -434,19 +492,34 @@ body {
 }
 .pitem-container:hover .pitem-text {
     display: block;
-    background: rgba(0, 0, 0, .6);
+    background: rgba(0, 0, 0, .75);
 }
 
 
-.pitem-text h3 {
-    margin-top: 65%
+.pitem-text h4 {
+    margin-top: 65%;
+    font-family: Montserrat,"Helvetica Neue",Helvetica,Arial,sans-serif;
+    font-weight: 700;
+    letter-spacing: 1px;
+    color: #fff;
 }
 
 .pitem-text p {
-    margin-top: -15%
+    margin-top: -5%;
 }
 
-.intro-more {
-    position: relative
-    margin-top: -15%
-}   
+#intro-square {
+    /* background:black;
+    opacity: 0.6;*/
+    border: 2px solid black; 
+    display: block;
+    background: rgba(0, 0, 0, .5);
+    padding-top: 10px;
+    padding-bottom: 20px;
+    padding-left: -50px;
+    padding-right: -50px;
+}
+ 
+#projects {
+    padding-top: -20px;
+}
